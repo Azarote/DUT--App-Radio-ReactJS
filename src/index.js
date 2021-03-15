@@ -11,5 +11,5 @@ import {RadioListener} from './components/RadioListener.jsx';
 document.body.innerHTML=body;
 ReactDOM.render(
     <RadioListener />,
-    document.body
+    document.getElementById('root')
 );

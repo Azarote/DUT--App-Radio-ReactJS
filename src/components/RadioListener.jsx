@@ -5,7 +5,14 @@ import {Lecteur} from './Lecteur.jsx';
 
 class RadioListener extends React.Component {
     render() {
-        return <ListeRadios />;
+        return (
+            <div id="RadioListener">
+                <h1>RadioListener</h1>
+                <Tags />
+                <ListeRadios />
+                <Lecteur />
+            </div>
+        );
     }
 }
 
