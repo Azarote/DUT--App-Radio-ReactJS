@@ -5,8 +5,7 @@
  module.exports = {
   mode: 'development',
   entry: {
-    index: './src/index.js',
-    indexcss: './src/index.css',
+    index: './src/index.js'
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -26,10 +25,11 @@
    
    module:{
     rules: 
-    [            {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
-    },
+    [
+        {
+            test: /\.css$/i,
+            use: ['style-loader', 'css-loader'],
+        },
         {
             test: /.jsx?$/,
             exclude: /node_modules/,
@@ -39,7 +39,12 @@
                     presets: ['@babel/preset-env', '@babel/preset-react']
                 }
             }
-        }]
+        },
+        {
+            test: /\.html$/i,
+            loader: 'html-loader',
+        }
+    ]
    }
 
  };
