@@ -3,7 +3,7 @@ import React from 'react';
 class Lecteur extends React.Component {
     render(){
         return(
-            <div>Composant lecteur</div>
+            <div id="container-lecteur"></div>
         );
     }
 }
