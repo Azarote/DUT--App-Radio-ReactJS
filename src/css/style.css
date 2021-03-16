@@ -52,6 +52,9 @@ main{
     vertical-align: top;
     height:600px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    text-align:center;
+    overflow-y:auto;
+    padding:10px 0;
 }
 
 #container-lecteur{
@@ -59,7 +62,7 @@ main{
     border-radius: 5px;
     border-left:solid lightgrey 1px;
     display:inline-block;
-    width:calc(25% - 1px);
+    width:calc(25% - 2px);
     vertical-align: top;
     height:200px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -79,3 +82,23 @@ main{
 }
 
 ::-webkit-scrollbar-thumb:active { background: #7e7e7e; }
+
+#container-listeRadios::-webkit-scrollbar {width: 5px;}
+
+#container-listeRadios::-webkit-scrollbar-thumb {
+    background: rgba(14, 201, 158, 0.4);
+    border-radius:10px;
+}
+
+#container-listeRadios::-webkit-scrollbar-thumb:active { background: rgba(14, 201, 158, 0.8); }
+
+/* TEST CONTENEUR RADIO
+.test{
+    display:inline-block;
+    width:250px;
+    height:130px;
+    border:solid lightgrey 1px;
+    border-radius:5px;
+    margin:5px;
+}
+*/
