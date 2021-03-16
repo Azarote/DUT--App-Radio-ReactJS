@@ -24,4 +24,7 @@ main{
     max-width:500px;
     margin:0 auto;
     display:block;
+    padding:0 5px;
+    background-color:rgba(255,255,255,0.5);
+    box-shadow: rgba(14, 201, 158, 0.4) 5px 5px, rgba(14, 201, 158, 0.3) 10px 10px, rgba(14, 201, 158, 0.2) 15px 15px, rgba(14, 201, 158, 0.1) 20px 20px, rgba(14, 201, 158, 0.05) 25px 25px;
 }
