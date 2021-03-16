@@ -1,0 +1,27 @@
+* { font-family: "Segoe UI" }
+
+body{
+    max-width:1100px;
+    margin:20px auto;
+    background-color:rgb(240,240,240);
+}
+
+main{
+    padding:0 10px;
+}
+
+#footer{
+    background-color: rgb(62, 62, 62);
+    color:white;
+    width:100%;
+    bottom:0;
+    left:0;
+    position:fixed;
+    text-align:center;
+}
+
+#logo{
+    max-width:500px;
+    margin:0 auto;
+    display:block;
+}
