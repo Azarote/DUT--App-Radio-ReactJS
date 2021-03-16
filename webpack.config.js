@@ -47,6 +47,15 @@
             loader: 'html-loader',
         },
         {
+            test: /\.m?js$/,
+            use: {
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env', '@babel/preset-react']
+                }
+            }
+        },
+        {
             test: /\.(png|jpe?g|gif)$/i,
             use: [
                 {

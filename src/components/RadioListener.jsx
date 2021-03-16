@@ -9,7 +9,7 @@ class RadioListener extends React.Component {
         return (
             <div id="RadioListener">
                 <header>
-                    <img id="logo" src={logo} />
+                    <img id="logo" src={logo}  alt={"logo site"}/>
                 </header>
 
                 <main>
