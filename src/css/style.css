@@ -6,6 +6,10 @@ body{
     background-color:rgb(240,240,240);
 }
 
+header{
+    margin-bottom:75px;
+}
+
 main{
     padding:0 10px;
 }
@@ -25,6 +29,53 @@ main{
     margin:0 auto;
     display:block;
     padding:0 5px;
+    border-radius:5px;
     background-color:rgba(255,255,255,0.5);
     box-shadow: rgba(14, 201, 158, 0.4) 5px 5px, rgba(14, 201, 158, 0.3) 10px 10px, rgba(14, 201, 158, 0.2) 15px 15px, rgba(14, 201, 158, 0.1) 20px 20px, rgba(14, 201, 158, 0.05) 25px 25px;
 }
+
+/* Containers des composants */
+#container-tags{
+    background-color:rgba(255,255,255,0.5);
+    border-radius:5px;
+    display:block;
+    margin-bottom:30px;
+    height:50px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+#container-listeRadios{
+    background-color:rgba(255,255,255,0.5);
+    border-radius: 5px;
+    display:inline-block;
+    width:75%;
+    vertical-align: top;
+    height:600px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+#container-lecteur{
+    background-color:rgba(255,255,255,0.5);
+    border-radius: 5px;
+    border-left:solid lightgrey 1px;
+    display:inline-block;
+    width:calc(25% - 1px);
+    vertical-align: top;
+    height:200px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+/* Personnalisation scrollbar */
+::-webkit-scrollbar {width: 13px;}
+
+::-webkit-scrollbar-track {
+    background: #dddddd;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9d9d9d;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:active { background: #7e7e7e; }

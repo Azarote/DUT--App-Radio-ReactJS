@@ -1,9 +1,9 @@
 import React from 'react';
 
 class Tags extends React.Component {
-    render(){
-        return(
-            <div>Composant tags</div>
+    render() {
+        return (
+            <div id="container-tags"></div>
         );
     }
 }
