@@ -16,6 +16,10 @@ main{
     padding:0 10px;
 }
 
+h4{
+    margin:0;
+}
+
 #footer{
     background-color: rgb(62, 62, 62);
     color:white;
@@ -61,30 +65,24 @@ main{
 
 #container-lecteur{
     background-color:rgba(255,255,255,0.5);
-    border-radius: 5px;
+    border-radius: 0 5px 5px 0;
     display:inline-block;
     width:25%;
     vertical-align: top;
     height:200px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    overflow: hidden;
 }
 
-/* Personnalisation scrollbar */
-::-webkit-scrollbar {width: 13px;}
-
-::-webkit-scrollbar-track {
-    background: #dddddd;
-    border-radius:10px;
+#container-lecteur img{
+    max-width:100%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius:0 0 5px 5px;
 }
 
-::-webkit-scrollbar-thumb {
-    background: #9d9d9d;
-    border-radius:10px;
+#lecteur-img-h4{
+    text-align: center;
 }
-
-::-webkit-scrollbar-thumb:active { background: #7e7e7e; }
-
-#container-listeRadios::-webkit-scrollbar {width: 5px;}
 
 /* Style liste des radios */
 .container-singleRadio{
@@ -94,15 +92,16 @@ main{
     border:solid lightgrey 1px;
     border-radius:5px;
     margin:5px;
-    transition:box-shadow ease-in-out 0.3s;
     cursor:pointer;
     overflow:hidden;
     position:relative;
+    background: rgba(255,255,255,0.5) linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2));
+    transition:box-shadow ease-in-out 0.2s;
 }
 
 .container-singleRadio:hover{
-    box-shadow: rgba(14, 201, 158, 0.4) 2px 2px, rgba(14, 201, 158, 0.3) 4px 4px, rgba(14, 201, 158, 0.2) 6px 6px;
-    transition:box-shadow ease-in-out 0.3s;
+    box-shadow: rgba(14, 201, 158, 1) 2px 2px, rgba(14, 201, 158, 0.3) 4px 4px, rgba(14, 201, 158, 0.2) 6px 6px;
+    transition:box-shadow ease-in-out 0.2s;
 }
 
 .container-singleRadio img{
@@ -112,7 +111,7 @@ main{
 .nom-radio{
     width:218px;
     height:40px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
     bottom:0;
     color:white;
@@ -134,3 +133,20 @@ main{
     height:100%;
     padding:0 5px;
 }
+
+/* Personnalisation scrollbar */
+::-webkit-scrollbar {width: 13px;}
+
+::-webkit-scrollbar-track {
+    background: #dddddd;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9d9d9d;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:active { background: #7e7e7e; }
+
+#container-listeRadios::-webkit-scrollbar {width: 5px;}
