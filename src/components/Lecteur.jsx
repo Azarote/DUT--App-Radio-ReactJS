@@ -11,9 +11,12 @@ class Lecteur extends React.Component {
             <div id="container-lecteur">
                 {
                     this.props.currentRadio == null
-                        ?
-                        <div id="lecteur-empty">Aucune radio sélectionnée.</div> :
-                        <div id="lecteur-img-h4"><img src={image} alt="image de la radio"/><h4>{this.props.currentRadio.name}</h4></div>
+                        ? <div id="lecteur-empty">Aucune radio sélectionnée.</div>
+                        : <div style={{padding: `0 3px`}}>
+                            <img src={image} alt="image de la radio"/>
+                            <h4>{this.props.currentRadio.name}</h4>
+                            <div id="separation"/>
+                        </div>
                 }
             </div>
         );
