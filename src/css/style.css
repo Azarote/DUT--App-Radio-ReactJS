@@ -31,6 +31,12 @@ footer{
     font-size:0.9em;
 }
 
+input[type="range"]{
+    cursor:pointer;
+    width:60px;
+    height:6px;
+}
+
 #logo{
     max-width:500px;
     width:100%;
@@ -117,13 +123,6 @@ footer{
     transition:color 0.3s;
 }
 
-/*
-#container-lecteur button:hover svg{
-    color:#4fd3b5;
-    transition:color 0.3s;
-}
-*/
-
 #separation{
     width:80%;
     background-color:lightgrey;
@@ -142,13 +141,16 @@ footer{
     cursor:pointer;
     overflow:hidden;
     position:relative;
-    /* background: rgba(255,255,255,0.5) linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2)); */
     transition:box-shadow ease-in-out 0.2s;
 }
 
 .container-singleRadio:hover{
     box-shadow: rgba(14, 201, 158, 1) 2px 2px, rgba(14, 201, 158, 0.3) 4px 4px, rgba(14, 201, 158, 0.2) 6px 6px;
     transition:box-shadow ease-in-out 0.2s;
+}
+
+.est-actif{
+    box-shadow: rgba(14, 201, 158, 1) 2px 2px, rgba(14, 201, 158, 0.3) 4px 4px, rgba(14, 201, 158, 0.2) 6px 6px;
 }
 
 .container-singleRadio img{
