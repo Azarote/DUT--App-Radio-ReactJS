@@ -1,8 +1,8 @@
 import React from 'react';
-import {Tags} from './Tags.jsx';
 import {ListeRadios} from './ListeRadios.jsx';
 import {Lecteur} from './Lecteur.jsx';
 import logo from '../ressources/images/logo.png';
+import {ListeTags} from "./ListeTags.jsx";
 
 class RadioListener extends React.Component {
     constructor(props) {
@@ -23,7 +23,7 @@ class RadioListener extends React.Component {
                 </header>
 
                 <main>
-                    <Tags />
+                    <ListeTags listetags={(radio)=>{this.listetags(radio)}}/>
                     <ListeRadios updateCurrentRadio={(radio)=>{this.updateCurrentRadio(radio)}}/>
                     <Lecteur currentRadio={this.state.currentRadio}/>
                 </main>
