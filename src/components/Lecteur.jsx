@@ -43,6 +43,7 @@ class Lecteur extends React.Component {
             if (audio)
             audio.addEventListener('canplaythrough', (event) => {
                 this.setState({status: 'playing'})
+                audio.volume = 0.5;
                 event.stopPropagation();
             })
             if (audio)
