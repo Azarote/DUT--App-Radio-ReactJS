@@ -1,5 +1,10 @@
 import React from 'react';
 
+//Icons
+import { FaRegPlayCircle } from 'react-icons/fa';
+import { FaRegPauseCircle } from 'react-icons/fa';
+import { FaFastForward } from 'react-icons/fa';
+
 class Lecteur extends React.Component {
     constructor(props) {
         super(props);
@@ -24,6 +29,7 @@ class Lecteur extends React.Component {
         render() {
         let image = null;
         let button = '';
+        let button2 = '';
 
         //TODO : to fix :
             //audioRef is null at the first radio
@@ -43,12 +49,17 @@ class Lecteur extends React.Component {
             image = require('../ressources/images/' + this.props.currentRadio.img).default;
 
         if (this.state.status === 'playing')
-           button = <button onClick={ ()=> {this.stop()}} > Pause </button>
-        else if (this.state.status === 'loading')
-            button = <p>loading</p>;
+        {
+            button = <abbr title="Mettre la radio en pause"><button onClick={ ()=> {this.stop()}} ><FaRegPauseCircle size="2.5em"/></button></abbr>
+            button2 = <abbr title="Revenir en direct"><button ><FaFastForward size="2em"/></button></abbr>;
+        }
+        else if (this.state.status === 'stopped')
+        {
+            button = <abbr title="Reprendre la lecture de la radio"><button onClick={ ()=> {this.start()}} ><FaRegPlayCircle size="2.5em"/></button></abbr>
+            button2 = <abbr title="Revenir en direct"><button ><FaFastForward size="2em"/></button></abbr>;
+        }
         else
-            button = <button onClick={ ()=> {this.start()}} > Play </button>
-
+            button = <p>Chargement...</p>;
 
         return (
             <div id="container-lecteur">
@@ -60,7 +71,7 @@ class Lecteur extends React.Component {
                             <h4>{this.props.currentRadio.name}</h4>
                             <div id="separation"/>
                             <audio src={this.props.currentRadio.url} autoPlay ref={this.audioRef}/>
-                            {button}
+                            {button}{button2}
                         </div>
                 }
             </div>

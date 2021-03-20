@@ -10,6 +10,7 @@ body{
 
 header{
     margin-bottom:75px;
+    padding:0 28px 0 5px;
 }
 
 main{
@@ -24,18 +25,15 @@ abbr{
     text-decoration: none;
 }
 
-#footer{
-    background-color: rgb(62, 62, 62);
-    color:white;
-    width:100%;
-    bottom:0;
-    left:0;
-    position:fixed;
-    text-align:center;
+footer{
+    font-style: italic;
+    padding:0 10px;
+    font-size:0.9em;
 }
 
 #logo{
     max-width:500px;
+    width:100%;
     margin:0 auto;
     display:block;
     padding:0 5px;
@@ -73,7 +71,7 @@ abbr{
     display:inline-block;
     width:25%;
     vertical-align: top;
-    height:200px;
+    min-height:220px;
     box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px;
     overflow: hidden;
     text-align: center;
@@ -83,7 +81,48 @@ abbr{
     max-width:100%;
     box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
     border-radius:0 0 5px 5px;
+    background-color:white;
 }
+
+#container-lecteur button{
+    cursor:pointer;
+    border:none;
+    background:rgb(240,240,240);
+    outline:none;
+    border-radius:5px;
+    margin:5px;
+    height:40px;
+    box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px;
+    transition:background 0.3s, border-radius 0.3s;
+}
+
+#container-lecteur button:hover{
+    background:rgb(220,220,220);
+    border-radius:15px;
+    transition:background 0.3s, border-radius 0.3s;
+}
+
+#container-lecteur button:active{
+    background:rgb(200,200,200);
+    transition:background 0.3s;
+}
+
+#container-lecteur button, #container-lecteur button svg{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#container-lecteur button svg{
+    color:rgb(100,100,100);
+    transition:color 0.3s;
+}
+
+/*
+#container-lecteur button:hover svg{
+    color:#4fd3b5;
+    transition:color 0.3s;
+}
+*/
 
 #separation{
     width:80%;
@@ -138,7 +177,7 @@ abbr{
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100%;
+    height:220px;
     padding:0 5px;
 }
 

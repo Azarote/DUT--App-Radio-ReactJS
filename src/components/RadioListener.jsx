@@ -28,11 +28,9 @@ class RadioListener extends React.Component {
                     <Lecteur currentRadio={this.state.currentRadio}/>
                 </main>
 
-                {/*
-                <div id="footer">
+                <footer>
                     <p>© Copyright Mattéo DUFOUR & Matteo MUNOZ</p>
-                </div>
-                */}
+                </footer>
             </div>
         );
     }
