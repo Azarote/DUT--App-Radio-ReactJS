@@ -13,7 +13,13 @@ class ListeTags extends React.Component{
     render(){
         return(
             <div id="container-tags">
-                <Tags tags={this.listetags}/>
+                <h2>Tags</h2>
+                {( ()=> {
+                        var listeTags = [];
+                        this.listetags.forEach((value,key)=>{listeTags.push(<Tags tags={this.listetags[key]} key={key}/>);
+                        })
+                        return listeTags;}
+                )()}
             </div>
         );
     }

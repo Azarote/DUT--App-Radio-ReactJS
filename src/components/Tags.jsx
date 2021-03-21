@@ -7,9 +7,7 @@ class Tags extends React.Component {
     }
     render() {
         return (
-            <div >
-                <div >{this.props.tags}</div>
-            </div>
+            <div className="container-singleTag">{this.props.tags}</div>
         );
     }
 }

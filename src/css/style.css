@@ -54,8 +54,43 @@ input[type="range"]{
     border-radius:5px;
     display:block;
     margin-bottom:30px;
-    height:50px;
+    max-height:35px;
     box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 3px;
+    overflow-y:hidden;
+    text-align: center;
+    transition:max-height 1s;
+    padding:5px;
+}
+
+#container-tags:hover{
+    max-height:1000px;
+    transition:max-height 1s;
+    cursor:default;
+}
+
+#container-tags h2{
+    margin:0 0 10px 0;
+}
+
+.container-singleTag{
+    display:inline-block;
+    background-color: rgba(79,211,171,0.5);
+    margin:3px 5px;
+    padding:0 3px;
+    cursor:pointer;
+    border-radius:3px;
+    transition:background-color 0.3s, border-radius 0.3s;
+}
+
+.container-singleTag:hover{
+    background-color: rgba(79,211,171,0.8);
+    border-radius:7px;
+    transition:background-color 0.3s, border-radius 0.3s;
+}
+
+.container-singleTag:active{
+    background-color: rgba(79,211,171,1);
+    transition:background-color 0.3s;
 }
 
 #container-listeRadios{
@@ -123,11 +158,11 @@ input[type="range"]{
     transition:color 0.3s;
 }
 
-#separation{
-    width:80%;
-    background-color:lightgrey;
-    height:1px;
-    margin:10px auto;
+#separation {
+    width: 80%;
+    background-color: lightgrey;
+    height: 1px;
+    margin: 10px auto;
 }
 
 /* Style liste des radios */
