@@ -1,5 +1,5 @@
 import React from 'react';
-import fondRadio from '../ressources/images/gplay.png'
+import fondRadio from '../ressources/images/fabric-of-squares.png'
 
 class Radio extends React.Component{
     constructor(props) {
