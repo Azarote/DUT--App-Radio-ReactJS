@@ -5,18 +5,15 @@ import {Tags} from "./Tags.jsx";
 class ListeTags extends React.Component{
     constructor(props) {
         super(props);
+        this.listetags = [];
+        radios.list.forEach((value) =>{value.tags.forEach((value1) => {if (this.listetags.indexOf(value1)===-1)this.listetags.push(value1)} )  })
 
     }
 
     render(){
         return(
             <div id="container-tags">
-                {( ()=> {
-                        var listeTags = [];
-                        Object.keys(radios.list).forEach((value,key) => {listeTags.push(<Tags listetags={()=>this.props.listetags(radios.list[key])} radio={radios.list[key]} key={key}/>);
-                        })
-                        return listeTags;}
-                )()}
+                <Tags tags={this.listetags}/>
             </div>
         );
     }

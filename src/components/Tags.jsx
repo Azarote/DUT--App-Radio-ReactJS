@@ -8,7 +8,7 @@ class Tags extends React.Component {
     render() {
         return (
             <div >
-                <div >{this.props.radio.tags}</div>
+                <div >{this.props.tags}</div>
             </div>
         );
     }
