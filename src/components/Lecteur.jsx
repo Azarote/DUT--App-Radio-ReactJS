@@ -35,6 +35,7 @@ class Lecteur extends React.Component {
     }
         render() {
         let image = null;
+        let tagsRadio = [];
         let button , button2, inputVolume = '';
 
         //TODO : to fix :
@@ -52,8 +53,15 @@ class Lecteur extends React.Component {
                 event.stopPropagation();
             })
 
-        if (this.props.currentRadio != null)
+        if (this.props.currentRadio != null) {
             image = require('../ressources/images/' + this.props.currentRadio.img).default;
+            this.props.currentRadio.tags.forEach((value) => tagsRadio.push(value));
+            let temp = [];
+            for (let i = 0; i < tagsRadio.length; i++) {
+                temp.push( <div className="container-singleTag">{tagsRadio[i]}</div>);
+            }
+            tagsRadio = temp;
+        }
 
         if (this.state.status === 'playing')
         {
@@ -82,6 +90,7 @@ class Lecteur extends React.Component {
                             <div id="separation"/>
                             <audio src={this.props.currentRadio.url} autoPlay ref={this.audioRef}/>
                             {button}{button2}{inputVolume}
+                            {tagsRadio}
                         </div>
                 }
             </div>
