@@ -7,7 +7,7 @@ class Lecteur extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
-        this.testo = false;
+        this.oneTime = false;
         this.audioRef = React.createRef();
         this.state = {
             status: 'loading'
@@ -42,16 +42,16 @@ class Lecteur extends React.Component {
         //TODO : to fix :
             //audioRef is null at the first radio
         const audio = this.audioRef.current;
-            if (audio && !this.testo)
+            if (audio && !this.oneTime)
             audio.addEventListener('canplaythrough', (event) => {
                 this.setState({status: 'playing'})
-                this.testo = true;
+                this.oneTime = true;
                 audio.volume = 0.5;
                 event.stopPropagation();
             })
-            if (audio && !this.testo)
+            if (audio && !this.oneTime)
             audio.addEventListener('abort', (event) => {
-                this.testo = true;
+                this.oneTime = true;
                 this.setState({ status: 'loading'})
                 event.stopPropagation();
             })
