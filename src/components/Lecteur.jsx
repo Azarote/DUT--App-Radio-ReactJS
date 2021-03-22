@@ -61,7 +61,7 @@ class Lecteur extends React.Component {
             this.props.currentRadio.tags.forEach((value) => tagsRadio.push(value));
             let temp = [];
             for (let i = 0; i < tagsRadio.length; i++) {
-                temp.push( <div className="lecteur-singleTag">{tagsRadio[i]}</div>);
+                temp.push( <div className="tag lecteur-singleTag">{tagsRadio[i]}</div>);
             }
             tagsRadio = temp;
         }
@@ -90,10 +90,10 @@ class Lecteur extends React.Component {
                         : <div style={{padding: `0 3px 3px`}}>
                             <img src={image} alt="image de la radio"/>
                             <h4>{this.props.currentRadio.name}</h4>
-                            <div id="separation"/>
-                            <audio src={this.props.currentRadio.url} autoPlay ref={this.audioRef}/>
-                            {button}{button2}{inputVolume}
-                            <div id="separation"/>
+                            <div id="container-controls">
+                                <audio src={this.props.currentRadio.url} autoPlay ref={this.audioRef}/>
+                                {button}{button2}{inputVolume}
+                            </div>
                             {tagsRadio}
                         </div>
                 }
