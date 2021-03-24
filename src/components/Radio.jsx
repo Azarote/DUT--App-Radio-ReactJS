@@ -1,5 +1,4 @@
 import React from 'react';
-import fondRadio from '../ressources/images/fabric-of-squares.png'
 import {FaRss} from 'react-icons/fa';
 
 class Radio extends React.Component{
@@ -10,7 +9,7 @@ class Radio extends React.Component{
     render() {
         const image = require('../ressources/images/'+this.props.radio.img).default;
         return(
-            <div onClick={()=>{this.props.updateCurrentRadio()}} className="container-singleRadio" style={{backgroundImage: `url(${fondRadio})`}}>
+            <div onClick={()=>{this.props.updateCurrentRadio()}} className="container-singleRadio">
                 <img src={image} alt="image de la radio"/>
                 <abbr title={this.props.radio.name}><div className="nom-radio"><FaRss size="1em"/> {this.props.radio.name}</div></abbr>
             </div>

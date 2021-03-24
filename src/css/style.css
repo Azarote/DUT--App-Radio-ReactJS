@@ -20,7 +20,7 @@ html { overflow-y: scroll; }
 body{
     max-width:1100px;
     margin:20px auto;
-    background-color:rgb(240,240,240);
+    background-color:rgb(78,78,78);
 }
 
 header{
@@ -38,6 +38,7 @@ footer{
     font-style: italic;
     padding:0 10px;
     font-size:0.9em;
+    color:white;
 }
 
 input[type="range"]{
@@ -113,7 +114,7 @@ input[type="range"]{
 /* Composant RADIOS */
 #container-listeRadios{
     background-color:#f8f8f8;
-    border-radius: 5px;
+    border-radius: 5px 0 5px 5px;
     display:inline-block;
     width:75%;
     vertical-align: top;
@@ -134,6 +135,7 @@ input[type="range"]{
     cursor:pointer;
     overflow:hidden;
     position:relative;
+    background-color:rgb(240,240,240);
     transition:box-shadow ease-in-out 0.2s;
 }
 

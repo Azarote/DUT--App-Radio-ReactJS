@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import regeneratorRuntime from "regenerator-runtime";
+import fond from './ressources/images/fabric-of-squares.png';
 
 import body from './index.html';
 import './css/style.css';
@@ -9,6 +9,8 @@ import './css/style.css';
 import {RadioListener} from './components/RadioListener.jsx';
 
 document.body.innerHTML=body;
+document.body.style.backgroundImage = "url(" + fond + ")";
+
 ReactDOM.render(
     <RadioListener />,
     document.getElementById('root')
