@@ -5,12 +5,14 @@ import {ListeRadios} from './ListeRadios.jsx';
 import {Lecteur} from './Lecteur.jsx';
 import {ListeTags} from "./ListeTags.jsx";
 
+//Composant principal contenant tous les autres composants
 class RadioListener extends React.Component {
     constructor(props) {
         super(props);
         this.state = {currentRadio:null}
     }
 
+    //Méthode qui met à jour l'état du composant avec la radio active
     updateCurrentRadio(radio){
         this.setState({currentRadio:radio});
     }

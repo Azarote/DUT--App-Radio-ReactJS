@@ -1,6 +1,7 @@
 import React from 'react';
 import {FaRss} from 'react-icons/fa';
 
+//Composant qui contient les informations d'une radio
 class Radio extends React.Component{
     constructor(props) {
         super(props);

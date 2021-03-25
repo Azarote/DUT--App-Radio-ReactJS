@@ -2,6 +2,7 @@ import React from 'react';
 import {radios} from '../ressources/radios-big.mjs';
 import {Tags} from "./Tags.jsx";
 
+//Composant qui contient la liste des tags
 class ListeTags extends React.Component{
     constructor(props) {
         super(props);
@@ -19,7 +20,7 @@ class ListeTags extends React.Component{
             <div id="container-tags">
                 <h2>Tags</h2>
                 {( ()=> {
-                        var listeTags = [];
+                        let listeTags = [];
                         this.listetags.forEach((value,key)=>{
                             listeTags.push(<Tags tags={this.listetags[key]} key={key}/>);
                         })
