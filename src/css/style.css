@@ -20,7 +20,7 @@ html { overflow-y: scroll; }
 body{
     max-width:1100px;
     margin:20px auto;
-    background-color:rgb(78,78,78);
+    background-color:rgb(220,220,220);
 }
 
 header{
@@ -38,7 +38,6 @@ footer{
     font-style: italic;
     padding:0 10px;
     font-size:0.9em;
-    color:white;
 }
 
 input[type="range"]{
