@@ -38,16 +38,14 @@ class Lecteur extends React.Component {
     let image = null;
     let tagsRadio = [];
     let button , button2, inputVolume = '';
-
-    //TODO : to fix :
-    //audioRef is null at the first radio
+    
     const audio = this.audioRef.current;
 
     if (audio && !this.oneTime)
     audio.addEventListener('canplaythrough', (event) => {
         this.setState({status: 'playing'})
-        this.oneTime = true;
         audio.volume = 0.5;
+        this.oneTime = true;
         event.stopPropagation();
     })
 
